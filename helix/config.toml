@@ -1,0 +1,38 @@
+theme = "onedark"
+
+[editor]
+mouse = true
+middle-click-paste = true
+shell = ["sh","-c"]
+true-color = true
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.statusline]
+left = [
+  "mode", 
+  "spinner",
+  "file-name"
+]
+center = [
+]
+right = [
+  "diagnostics",
+  "selections", 
+  "position", 
+  "file-encoding", 
+  "file-type"
+]
+
+[editor.indent-guides]
+render = true
+character = "│" #"▏", "┆", "┊", "⸽"
+skip-levels = 0
+
+[keys.normal]
+C-c = "no_op"
+"C-/" = "toggle_comments"
