@@ -1,6 +1,8 @@
 [ -f "$USERPROFILE/bin/win-sudo/s/path.sh" ] && source "$USERPROFILE/bin/win-sudo/s/path.sh"
-
 eval "$(oh-my-posh --init --shell bash --config $POSH_THEMES_PATH/star.omp.json)"
+
+proxy=localhost:64235
+export https_proxy=http://$proxy http_proxy=http://$proxy all_proxy=socks5://$proxy
 
 alias wsl='winpty wsl'
 
